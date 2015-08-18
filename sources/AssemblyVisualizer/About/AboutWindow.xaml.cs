@@ -28,20 +28,17 @@ namespace AssemblyVisualizer.About
             var version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             txtVersion.Text = version;
 
-            var animation = new DoubleAnimation(1, new Duration(TimeSpan.FromSeconds(0.5)));
-            brd.BeginAnimation(OpacityProperty, animation);
-
-            escapeBinding.Command = new DelegateCommand(() => Close());
+            escapeBinding.Command = new DelegateCommand(Close);
         }
 
-        private void ButtonClickHandler(object sender, RoutedEventArgs e)
-        {            
-            Close();
-        }
-
-        private void HyperlinkClickHandler(object sender, RoutedEventArgs e)
+        private void SourcesClickHandler(object sender, RoutedEventArgs e)
         {           
-            GlobalServices.NavigateToHomePage();
+            GlobalServices.NavigateToSources();
+        }
+
+        private void AuthorClickHandler(object sender, RoutedEventArgs e)
+        {
+            GlobalServices.NavigateToAuthor();
         }
     }
 }

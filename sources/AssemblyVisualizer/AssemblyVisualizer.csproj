@@ -71,7 +71,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Reflector Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>C:\Program Files %28x86%29\Red Gate\.NET Reflector\Desktop 7.7\Addins\</OutputPath>
+    <OutputPath>..\..\build\</OutputPath>
     <DefineConstants>TRACE;DEBUG;Reflector</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -506,31 +506,24 @@
     <Resource Include="Images\VirtualMethod.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\IB.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\ib2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.TreeView, Version=4.1.0.7275, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Resource Include="Images\1xp180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.TreeView">
       <HintPath>..\..\build\ICSharpCode.TreeView.dll</HintPath>
     </Reference>
-    <Reference Include="ILSpy, Version=2.0.0.1566, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <ExecutableExtension>.exe</ExecutableExtension>
+    <Reference Include="ILSpy">
       <HintPath>..\..\build\ILSpy.exe</HintPath>
     </Reference>
-    <Reference Include="Mono.Cecil, Version=0.9.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Mono.Cecil">
       <HintPath>..\..\build\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Reflector">
-      <HintPath>C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 7.7\Reflector.exe</HintPath>
+      <HintPath>..\..\build\Reflector.exe</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\1xp180.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

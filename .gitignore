@@ -10,3 +10,10 @@ _ReSharper*/
 *.ReSharper
 *.patch
 *.jtconfig
+build/Addins/powercommands.dll
+build/License_DotNetReflector.rtf
+build/Reflector.exe.config
+build/cecil_LICENSE.txt
+build/log4net.dll
+build/log4net_LICENSE.txt
+build/log4net_NOTICE.txt

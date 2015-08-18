@@ -524,8 +524,11 @@ namespace AssemblyVisualizer.Controls.ZoomControl
             Point origoPosition = new Point(ActualWidth / 2, ActualHeight / 2);
             Point mousePosition = e.GetPosition(this);
 
-            DoZoom(
-                Math.Max(1 / MaxZoomDelta, Math.Min(MaxZoomDelta, e.Delta / 10000.0 * ZoomDeltaMultiplier + 1)),
+            var minifiedRawDelta = e.Delta / 70.0;
+            var deltaZoom = minifiedRawDelta > 0 ? minifiedRawDelta : -1.0f / minifiedRawDelta;
+
+            DoZoom(               
+                deltaZoom,
                 origoPosition,
                 mousePosition,
                 mousePosition);

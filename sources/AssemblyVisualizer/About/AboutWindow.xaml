@@ -18,46 +18,41 @@
     <Window.InputBindings>
         <KeyBinding Key="Escape" x:Name="escapeBinding"/>
     </Window.InputBindings>
-    <Border Opacity="0"
-            x:Name="brd">        
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Image Source="../Images/1xp180.png"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Source="../Images/1xp180.png"
                    Stretch="Uniform"
                    Width="180"
                    Height="180"/>
-            <StackPanel HorizontalAlignment="Center"
+        <StackPanel HorizontalAlignment="Center"
                         Grid.Row="1"
                         Margin="0, 0, 0, 20">
-                <TextBlock Grid.Row="1"                   
+            <TextBlock Grid.Row="1"                   
                        HorizontalAlignment="Center"
                        FontSize="14">
                     <TextBlock Text="Assembly Visualizer"/>
                     <TextBlock x:Name="txtVersion"/>
                 </TextBlock>
-                <TextBlock Text="by Denis Markelov" 
-                           HorizontalAlignment="Center"
+            <TextBlock HorizontalAlignment="Center"
                            FontSize="13"
-                           Margin="0, 3, 0, 0"/>
-                <TextBlock HorizontalAlignment="Center"
-                           Margin="0, 10, 0, 0">
-                    <Hyperlink Click="HyperlinkClickHandler"
+                           Margin="0, 3, 0, 0">
+                    <Run>by</Run>
+                    <Hyperlink Click="AuthorClickHandler"
                                Style="{StaticResource HyperlinkStyle}">
-                        <TextBlock>Home Page</TextBlock>
+                        <TextBlock>Denis Markelov</TextBlock>
                     </Hyperlink>
                 </TextBlock>
-            </StackPanel>                      
-                     
-            <Button Grid.Row="2"
-                    Content="Close"
-                    Click="ButtonClickHandler"
-                    HorizontalAlignment="Center"
-                    MinWidth="60"
-                    Margin="4"/>
-        </Grid>
-    </Border>
+            <TextBlock Margin="0, 14, 0, 0" HorizontalAlignment="Center">
+                    <Run>Get sources from </Run>
+                    <Hyperlink Click="SourcesClickHandler"
+                               Style="{StaticResource HyperlinkStyle}">
+                        <TextBlock>GitHub</TextBlock>
+                    </Hyperlink>
+                </TextBlock>
+        </StackPanel>
+    </Grid>
 </Window>

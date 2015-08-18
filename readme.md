@@ -2,8 +2,8 @@
 
 *Assembly Visualizer* is a data visualization plugin for .NET decompilers, currently supporting ILSpy and Reflector.    
 
-Website: http://manunt.github.com/AssemblyVisualizer    
-Copyright 2011 - 2013 Denis Markelov    
+Website: http://denismarkelov.github.com/AssemblyVisualizer    
+Copyright 2011 - 2015 Denis Markelov    
 Licensed under the Microsoft Public License
 
 ## Included open-source libraries
